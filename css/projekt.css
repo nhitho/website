@@ -1,0 +1,98 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    background-color: #fff;
+    color: #333;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+}
+
+.dark-mode-toggle {
+    margin-right: 60%; /* Abstand zwischen dem Slider und der UL-Liste */
+    cursor: pointer;
+    z-index: 1000; /* Damit es über der UL-Liste liegt */
+}
+
+.dark-mode-toggle label {
+    margin-right: 10px;
+}
+
+.dark-mode-toggle input {
+    width: 50px; /* Justiere die Breite nach Bedarf */
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    z-index: 1; /* Damit die UL-Liste unter der Fixed-Position des Dark-Mode-Toggles liegt */
+    width: 20%; /* Setze die gewünschte Breite in Prozent hier */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+nav li {
+    margin: 5px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h2 {
+    padding-bottom: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+p {
+    max-width: 800px; /* Setze die maximale Breite nach Bedarf */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Zeige "..." am Ende des Textes, wenn er abgeschnitten wird */
+    white-space: text-wrap; /* Verhindere Zeilenumbruch */
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .dark-mode-toggle {
+        order: -1; /* Setze die Reihenfolge auf -1, damit es über dem Main-Inhalt liegt */
+        margin: 0; /* Entferne den rechten Abstand auf kleinen Bildschirmen */
+    }
+
+    nav {
+        order: 0; /* Setze die Reihenfolge auf 0, damit es unter dem Slider liegt */
+    }
+}

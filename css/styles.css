@@ -1,0 +1,196 @@
+body {
+    font-family: 'Tahoma', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.dark-mode-toggle {
+    float: right;
+    display: flex;
+    align-items: center;
+}
+
+.dark-mode-toggle label {
+    margin-right: 10px;
+    color: #fff;
+}
+
+.dark-mode-toggle input {
+    width: 50px; /* Stelle die Breite des Sliders nach Bedarf ein */
+}
+
+.project {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 30%; /* Drei Projekte nebeneinander */
+}
+
+.project h3 {
+    margin-bottom: 10px; /* Fester Abstand unterhalb der Projekttitel */
+    max-width: 360px;
+}
+
+.project h3 a {
+    margin-bottom: 10px;
+    text-decoration: none; /* Entfernt die Unterstreichung */
+    color: inherit; /* Übernimmt die Farbe des übergeordneten Elements (hier h3) */
+}
+
+.project p {
+    max-width: 360px;
+}
+
+.project-image {
+    border: ridge 2px #6404e2;
+    border-radius: 10px; /* Änderung hier: Radius der abgerundeten Ecken */
+    box-shadow: 3px 3px 5px #000; /* Horizontale Verschiebung, vertikale Verschiebung, Radius und Farbe des Schattens */
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-source {
+    font-size: 9px;
+    margin-top: -10px; /* Ändere den Wert nach Bedarf */
+}
+
+/* Dark Mode Styling */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+header.dark-mode {
+    background-color: #222;
+}
+
+.project.dark-mode {
+    border: 1px solid #555;
+}
+
+/* About us */
+
+#about-us {
+    max-width: 800px; /* Setze die maximale Breite nach Bedarf */
+    margin: 20px auto; /* Zentriere den Bereich und füge oben/unten 20px Abstand hinzu */
+    text-align: center;
+}
+
+#about-us h2 {
+    padding-bottom: 10px;
+    margin-top: 150px;
+}
+
+#about-us p {
+    margin-top: 10px; /* Füge oberhalb des Absatzes 10px Abstand hinzu */
+}
+
+/* weitere Teile die für bsp Impresseum ist. */
+
+#impressum {
+    max-width: 800px; /* Setze die maximale Breite nach Bedarf */
+    margin: 20px auto; /* Zentriere den Bereich und füge oben/unten 20px Abstand hinzu */
+    text-align: center;
+}
+
+#impressum h2 {
+    padding-bottom: 10px;
+    margin-top: 200px;
+}
+
+#impressum p {
+    margin-top: 10px; /* Füge oberhalb des Absatzes 10px Abstand hinzu */
+}
+
+/* Responsive Layout für Desktop*/
+@media screen and (min-width: 768px) {
+    /* Auf Desktop-Geräten */
+    #projekte {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .project {
+        width: 30%; /* Drei Projekte nebeneinander */
+    }
+
+    h2 {
+        width: 100%; /* H2 nimmt die volle Breite */
+    }
+}
+/* Responsive Layout für mobile Geräte */
+@media screen and (max-width: 768px) {
+
+    h2 {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        width: 100%; /* H2 nimmt die volle Breite */
+        text-align: center; /* Dies ist nur für den Text innerhalb der Projekte */
+    }
+
+    #projekte {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .project {
+        width: 100%; /* Ein Projekt pro Zeile für kleine Bildschirme */
+        margin-bottom: 20px;
+    }
+    .project h3{
+        margin-top:-10px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        text-align: center; /* Dies ist nur für den Text innerhalb der Projekte */
+    }
+    .project p{
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+        text-align: center; /* Dies ist nur für den Text innerhalb der Projekte */
+    }
+}
